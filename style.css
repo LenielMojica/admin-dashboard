@@ -1,0 +1,91 @@
+:root{
+    --icon-size-logo:50px;
+    --icon-size:20px;
+
+    --logo-font-size:25px;
+    --nav-option-font-size:15px;
+}
+@font-face {
+  font-family: "MyRoboto";
+  src: url("../fonts/roboto/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+body {
+  font-family: "MyRoboto" ;
+}
+*{
+   margin: 0;
+   padding: 0;
+   
+}
+
+
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 100vh;
+}
+.header, .nav, .cards
+{
+    grid-column:2 ;
+}
+
+.first-row img{
+    height: var(--icon-size);
+      filter: brightness(0) invert(1);
+}
+.first-row img[src="assets/icons/view-dashboard.svg"]{
+height: var(--icon-size-logo);
+  filter: brightness(0) invert(1);
+
+}
+.second-row img{
+        height: var(--icon-size);
+        filter: brightness(0) invert(1);  
+}
+
+.sidebar{
+    grid-row: 1 / 4;
+display: grid;
+grid-template-rows: 1fr 1fr;
+font-weight: 600;
+font-size: 20px;
+background-color: #188bc9;
+color: white;
+font-size: var(--nav-option-font-size);
+}
+
+.first-row, .second-row{
+    display: grid;
+    
+    
+}
+.first-row{
+grid-template-rows: max(100px, 20%) min(50px, 50%) min(50px, 50%) min(50px, 50%) min(50px, 50%) min(50px, 50%) min(50px, 50%) ;
+
+
+}
+.second-row{
+grid-template-rows: min(50px, 50%) min(50px, 50%) min(50px, 50%) ;
+
+}
+
+.logo{
+    font-size: var(--logo-font-size);
+    
+}
+.first-row > div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+
+}
+.second-row > div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+   margin-left: 20px;
+}
