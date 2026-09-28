@@ -4,6 +4,8 @@
     --icon-size-md:25px;
     --logo-font-size:25px;
     --nav-option-font-size:15px;
+
+    --main-color:#188bc9;
 }
 @font-face {
   font-family: "MyRoboto";
@@ -34,11 +36,13 @@ body {
 }
 .cards{
     background-color:#d6dce4 ;
+    
 }
 .header{
     display: grid;
     grid-template-rows: repeat(2,1fr);
     grid-row: 1/span 1;
+      z-index: 2;
        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
 }
@@ -61,10 +65,12 @@ body {
 .other-section{
     flex: 1;
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
+    justify-content:center;
     align-items: center;
+    margin-right: 30px;
 }
-.other-section img[alt="placeholder"]{
+ img[alt="placeholder"]{
     background-color: #edc214;
     height: 60px;
     max-width: 60px;
@@ -73,7 +79,7 @@ body {
 .other-section span{
     font-weight: 800;
     font-size: 1rem;
-    margin-right: 20px;
+   
 }
 .search-section{
     display: flex;
@@ -82,6 +88,46 @@ body {
     margin-left: 1rem;
      align-items: center;
 }
+.header-second-row{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.left-side{
+    display: flex;
+    align-items: center;
+   
+    margin-left: 15px;
+    gap: 15px;
+}
+.left-side span{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+h1{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.right-side{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+   justify-content: space-between;
+   margin-right: 30px;
+   width: 40%;
+  
+}
+button{
+    color: white;
+    background-color: var(--main-color);
+    border: none;
+   padding: 10px;
+border-radius: 20px;
+width: 150px;
+    height: 40px;
+   
+}
+
 .first-row img{
     height: var(--icon-size-sm);
       filter: brightness(0) invert(1);
@@ -102,7 +148,7 @@ display: grid;
 grid-template-rows: 1fr 1fr;
 font-weight: 600;
 font-size: 20px;
-background-color: #188bc9;
+background-color: var(--main-color);
 color: white;
 font-size: var(--nav-option-font-size);
 }
